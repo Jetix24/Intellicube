@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_incubadora">
 
     <fragment
         android:id="@+id/nav_home"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.intellicube.ui.slideshow.PerfilFragment"
+        android:name="com.example.intellicube.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
@@ -32,4 +32,19 @@
         android:name="com.example.intellicube.ConfiguracionFragment"
         android:label="fragment_configuracion"
         tools:layout="@layout/fragment_configuracion" />
+    <fragment
+        android:id="@+id/nav_incubadora"
+        android:name="com.example.intellicube.IncubadoraFragment"
+        android:label="fragment_incubadora"
+        tools:layout="@layout/fragment_incubadora" />
+    <fragment
+        android:id="@+id/nav_informacion"
+        android:name="com.example.intellicube.InformacionFragment"
+        android:label="fragment_informacion"
+        tools:layout="@layout/fragment_informacion" />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.intellicube.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
 </navigation>
