@@ -16,13 +16,18 @@
             android:id="@+id/nav_perfil"
             android:icon="@drawable/user"
             android:title="Perfil" />
-        <item
-            android:id="@+id/nav_ayuda"
-            android:icon="@drawable/ayuda"
-            android:title="Ayuda" />
-        <item
-            android:id="@+id/nav_configuracion"
-            android:icon="@drawable/mantenimiento"
-            android:title="Configuración" />
     </group>
+        <item android:title="Comunicación">
+            <menu>
+                <item
+                    android:id="@+id/nav_ayuda"
+                    android:icon="@drawable/baseline_question_mark_24"
+                    android:title="Ayuda" />
+                <item
+                    android:id="@+id/nav_configuracion"
+                    android:icon="@drawable/configuracion"
+                    android:title="Configuración" />
+            </menu>
+        </item>
+
 </menu>
