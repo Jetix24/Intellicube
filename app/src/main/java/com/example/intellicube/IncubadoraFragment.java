@@ -23,6 +23,7 @@ public class IncubadoraFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    String titulo= "mi_actividad";
 
     public IncubadoraFragment() {
         // Required empty public constructor

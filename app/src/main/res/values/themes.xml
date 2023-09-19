@@ -20,6 +20,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
     <style name="Theme.Intellicube.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Intellicube.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

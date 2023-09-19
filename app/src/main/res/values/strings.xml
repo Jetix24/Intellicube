@@ -10,6 +10,71 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings para inicio de sesión y de registro -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registrase">Registrarse</string>
+    <string name="iniciarSesion">Iniciar Sesión</string>
+    <string name="button_iniciarSesion">Iniciar Sesión</string>
+    <string name="button_registrarse">Registrarse</string>
+    <string name="button_registrar">Registrar</string>
+    <string name="button_borrar">Borrar</string>
+    <string name="button_ingresar">Ingresar</string>
+    <string name="textView_nombre">Nombre(s)</string>
+    <string name="textView_apellidos">Apellidos</string>
+    <string name="textView_municipio">Municipio</string>
+    <string name="textView_estado">Estado</string>
+    <string name="textView_correo">Correo</string>
+    <string name="textView_password">Contraseña</string>
+    <string name="textView_passwordDos">Confirmar contraseña</string>
+    <string name="textView_intruccionesRegistrar">Ingrese sus datos en los campos correspondientes</string>
+
+    <!-- Strings para incubadora y información -->
+    <string name="incubadora">Incubadora</string>
+    <string name="informacion">Información</string>
+    <string name="button_conectar">Conectar</string>
+    <string name="button_iniciar">Iniciar</string>
+    <string name="button_detener">Detener</string>
+    <string name="button_reiniciar">Reiniciar</string>
+
+    <string name="textView_iniciarConexion">Iniciar Conexión</string>
+    <string name="textView_intruccionesIncubadora">Seleccione los tipos de huevos que se incubaran</string>
+    <string name="textView_pollo">Pollo</string>
+    <string name="textView_pavo">Pavo</string>
+    <string name="textView_pato">Pato</string>
+    <string name="textView_codorniz">Codorniz</string>
+    <string name="textView_tiempo">Tiempo</string>
+    <string name="textView_contador">00:00:00:00</string>
+    <string name="textView_d">D</string>
+    <string name="textView_h">H</string>
+    <string name="textView_m">M</string>
+    <string name="textView_s">S</string>
+    <string name="textView_temperatura">Temperatura</string>
+    <string name="textView_temp">00.00</string>
+    <string name="textView_grados">°C</string>
+    <string name="textView_humedad">Humedad</string>
+    <string name="textView_hum">100</string>
+    <string name="textView_porcentaje">%</string>
+    <string name="textView_nivelAgua">Nivel del agua</string>
+    <string name="textView_infoPollo">Ave caracterizadas por su pico corto y algo curvado, sus alas también cortas y sus patas robustas. Las gallinas, cuyas plumas son lustrosas, tienen una cresta carnosa de color rojizo.</string>
+    <string name="textView_infoPavo">Es un Ave de hasta 1 metro de alto, plumaje generalmente oscuro o pardo verdoso con manchas blancas en los extremos de las alas y en la cola, cuello largo y de verrugas rojas en  la cabeza.</string>
+    <string name="textView_infoPato">Ave acuática de cuello corto, pico aplanado y alas de escasa longitud que le permiten vuelos cortos, así como un cuerpo redondeado y rechoncho cubierto de plumas de diferentes tonalidades</string>
+    <string name="textView_infoCodorniz">Es un ave pequeña y rechoncha aunque con alas largas, que le permiten volar largas distancias adaptadas a su vida nómada y a sus migraciones entre continentes.</string>
+    <string name="textView_tiempoPollo">21:00:00:00</string>
+    <string name="textView_tiempoPavo">28:00:00:00</string>
+    <string name="textView_tiempoPato">28:00:00:00</string>
+    <string name="textView_tiempoCodorniz">16:00:00:00</string>
+    <string name="textView_tempPollo">37.77</string>
+    <string name="textView_tempPavo">37.22</string>
+    <string name="textView_tempPato">37.77</string>
+    <string name="textView_tempCodorniz">32.20</string>
+
+    <!-- Strings para Ayuda-->
+    <string name="ayuda">Ayuda</string>
+    <string name="textView_llama">Llama al</string>
+    <string name="textView_telefono">6144052292</string>
+
+    <!-- Strings para Configuración-->
+    <string name="configuracion">Configuración</string>
+    <string name="textView_mantenimiento">Se encuentra en mantenimiento</string>
+
 </resources>
