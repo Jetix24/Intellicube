@@ -7,26 +7,26 @@
     <fragment
         android:id="@+id/nav_ayuda"
         android:name="com.example.intellicube.AyudaFragment"
-        android:label="fragment_ayuda"
+        android:label="@string/ayuda"
         tools:layout="@layout/fragment_ayuda" />
     <fragment
         android:id="@+id/nav_configuracion"
         android:name="com.example.intellicube.ConfiguracionFragment"
-        android:label="fragment_configuracion"
+        android:label="@string/configuracion"
         tools:layout="@layout/fragment_configuracion" />
     <fragment
         android:id="@+id/nav_incubadora"
         android:name="com.example.intellicube.IncubadoraFragment"
-        android:label="fragment_incubadora"
+        android:label="@string/incubadora"
         tools:layout="@layout/fragment_incubadora" />
     <fragment
         android:id="@+id/nav_informacion"
         android:name="com.example.intellicube.InformacionFragment"
-        android:label="fragment_informacion"
+        android:label="@string/informacion"
         tools:layout="@layout/fragment_informacion" />
     <fragment
         android:id="@+id/nav_perfil"
         android:name="com.example.intellicube.PerfilFragment"
-        android:label="fragment_perfil"
+        android:label="@string/perfil"
         tools:layout="@layout/fragment_perfil" />
 </navigation>

@@ -14,11 +14,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="registrase">Registrarse</string>
     <string name="iniciarSesion">Iniciar Sesión</string>
+    <string name="perfil">Perfil</string>
     <string name="button_iniciarSesion">Iniciar Sesión</string>
     <string name="button_registrarse">Registrarse</string>
     <string name="button_registrar">Registrar</string>
     <string name="button_borrar">Borrar</string>
     <string name="button_ingresar">Ingresar</string>
+    <string name="button_ajustesDeCuenta">Ajustes de Cuenta</string>
+    <string name="button_cambiarImagen">Cambiar Imagen</string>
+    <string name="button_cambiar">Cambiar</string>
+
     <string name="textView_nombre">Nombre(s)</string>
     <string name="textView_apellidos">Apellidos</string>
     <string name="textView_municipio">Municipio</string>

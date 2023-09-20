@@ -4,18 +4,18 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_incubadora"
-            android:icon="@drawable/huevo"
-            android:title="Incubadora" />
-        <item
-            android:id="@+id/nav_informacion"
-            android:icon="@drawable/informacion"
-            android:title="Información" />
-        <item
-            android:id="@+id/nav_perfil"
-            android:icon="@drawable/user"
-            android:title="Perfil" />
+        <item android:title="Incubación">
+            <menu>
+                <item
+                    android:id="@+id/nav_incubadora"
+                    android:icon="@drawable/huevo"
+                    android:title="Incubadora" />
+                <item
+                    android:id="@+id/nav_informacion"
+                    android:icon="@drawable/informacion"
+                    android:title="Información" />
+            </menu>
+        </item>
     </group>
         <item android:title="Comunicación">
             <menu>
@@ -23,11 +23,19 @@
                     android:id="@+id/nav_ayuda"
                     android:icon="@drawable/baseline_question_mark_24"
                     android:title="Ayuda" />
-                <item
-                    android:id="@+id/nav_configuracion"
-                    android:icon="@drawable/configuracion"
-                    android:title="Configuración" />
             </menu>
         </item>
+    <item android:title="Ajustes">
+        <menu>
+            <item
+                android:id="@+id/nav_perfil"
+                android:icon="@drawable/user"
+                android:title="Perfil" />
+            <item
+                android:id="@+id/nav_configuracion"
+                android:icon="@drawable/configuracion"
+                android:title="Configuración" />
+        </menu>
+    </item>
 
 </menu>
