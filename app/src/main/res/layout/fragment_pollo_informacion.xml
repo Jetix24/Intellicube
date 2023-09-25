@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rose_200"
+    tools:context=".framentsInformacion.PolloFragmentInformacion">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView_codorniz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="@string/textView_pollo"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_polloInformacion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/pollo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_infoPollo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="@string/textView_infoPollo"
+        android:textColor="@color/blue_500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_polloInformacion2" />
+
+    <TextView
+        android:id="@+id/textView_polloTiempoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/textView_tiempo"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_infoPollo" />
+
+    <ImageView
+        android:id="@+id/imageView_relojPolloInfo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/reloj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_polloTiempoInfo" />
+
+    <TextView
+        android:id="@+id/textView_tiempoPollo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_tiempoPollo"
+        android:textColor="@color/blue_500"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_relojPolloInfo" />
+
+    <TextView
+        android:id="@+id/textView_diaPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_d"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPollo" />
+
+    <TextView
+        android:id="@+id/textView_horaPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_h"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_diaPolloInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPollo" />
+
+    <TextView
+        android:id="@+id/textView_minPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_m"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_horaPolloInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPollo" />
+
+    <TextView
+        android:id="@+id/textView_segPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_s"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_minPolloInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPollo" />
+
+    <TextView
+        android:id="@+id/textView_polloTempInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/textView_temperatura"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPollo" />
+
+    <ImageView
+        android:id="@+id/imageView_termoPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/temperatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_polloTempInfo"/>
+
+    <TextView
+        android:id="@+id/textView_tempPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_tempPollo"
+        android:textColor="@color/blue_500"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_termoPolloInfo" />
+
+    <TextView
+        android:id="@+id/textView_gradosPolloInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_grados"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tempPolloInfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

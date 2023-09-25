@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape>
+            <solid android:color="@color/rose_700" /> <!-- Cambia el color al presionar -->
+            <stroke
+                android:width="10dp"
+                android:color="@color/rose_700"/> <!-- Color del contorno -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</selector>

@@ -47,6 +47,7 @@
     <string name="textView_pavo">Pavo</string>
     <string name="textView_pato">Pato</string>
     <string name="textView_codorniz">Codorniz</string>
+    <string name="textView_elige">Elige</string>
     <string name="textView_tiempo">Tiempo</string>
     <string name="textView_contador">00:00:00:00</string>
     <string name="textView_d">D</string>

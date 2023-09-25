@@ -3,17 +3,26 @@ package com.example.intellicube;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.example.intellicube.framentsInformacion.CodornizFragmentInformacion;
+import com.example.intellicube.framentsInformacion.PatoFragmentInformacion;
+import com.example.intellicube.framentsInformacion.PolloFragmentInformacion;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link InformacionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InformacionFragment extends Fragment {
+public class InformacionFragment extends Fragment{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +33,7 @@ public class InformacionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout button_pollo, button_codorniz, button_pato;
     public InformacionFragment() {
         // Required empty public constructor
     }
@@ -59,6 +69,60 @@ public class InformacionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_informacion, container, false);
+        View vista = inflater.inflate(R.layout.fragment_informacion, container, false);
+
+        button_pollo = vista.findViewById(R.id.linearLayout_pollo);
+        button_codorniz = vista.findViewById(R.id.linearLayout_codorniz);
+        button_pato = vista.findViewById(R.id.linearLayout_pato);
+
+        button_pollo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_pollo.setBackgroundResource(R.drawable.rounded_border_select);
+                button_codorniz.setBackgroundResource(R.drawable.rounded_border);
+                button_pato.setBackgroundResource(R.drawable.rounded_border);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                PolloFragmentInformacion yourFragment = new PolloFragmentInformacion(); // Reemplaza "YourFragment" con el nombre de tu fragmento.
+                fragmentTransaction.replace(R.id.framelayout_informacion, yourFragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        button_codorniz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_pollo.setBackgroundResource(R.drawable.rounded_border);
+                button_codorniz.setBackgroundResource(R.drawable.rounded_border_select);
+                button_pato.setBackgroundResource(R.drawable.rounded_border);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                CodornizFragmentInformacion yourFragment = new CodornizFragmentInformacion(); // Reemplaza "YourFragment" con el nombre de tu fragmento.
+                fragmentTransaction.replace(R.id.framelayout_informacion, yourFragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        button_pato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_pollo.setBackgroundResource(R.drawable.rounded_border);
+                button_codorniz.setBackgroundResource(R.drawable.rounded_border);
+                button_pato.setBackgroundResource(R.drawable.rounded_border_select);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                PatoFragmentInformacion yourFragment = new PatoFragmentInformacion(); // Reemplaza "YourFragment" con el nombre de tu fragmento.
+                fragmentTransaction.replace(R.id.framelayout_informacion, yourFragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        return vista;
     }
 }

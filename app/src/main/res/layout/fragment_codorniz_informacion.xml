@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rose_200"
+    tools:context=".framentsInformacion.PolloFragmentInformacion">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView_codorniz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="@string/textView_codorniz"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_codornizInformacion"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/codorniz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_infoCodorniz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="@string/textView_infoCodorniz"
+        android:textColor="@color/blue_500"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_codornizInformacion" />
+
+    <TextView
+        android:id="@+id/textView_codornizTiempoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/textView_tiempo"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_infoCodorniz" />
+
+    <ImageView
+        android:id="@+id/imageView_relojCodornizInfo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/reloj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_codornizTiempoInfo" />
+
+    <TextView
+        android:id="@+id/textView_tiempoCodorniz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_tiempoCodorniz"
+        android:textColor="@color/blue_500"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_relojCodornizInfo" />
+
+    <TextView
+        android:id="@+id/textView_diaCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_d"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodorniz" />
+
+    <TextView
+        android:id="@+id/textView_horaCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_h"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_diaCodornizInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodorniz" />
+
+    <TextView
+        android:id="@+id/textView_minCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_m"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_horaCodornizInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodorniz" />
+
+    <TextView
+        android:id="@+id/textView_segCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_s"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_minCodornizInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodorniz" />
+
+    <TextView
+        android:id="@+id/textView_CodornizTempInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/textView_temperatura"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodorniz" />
+
+    <ImageView
+        android:id="@+id/imageView_termoCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/temperatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CodornizTempInfo"/>
+
+    <TextView
+        android:id="@+id/textView_tempCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_tempCodorniz"
+        android:textColor="@color/blue_500"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_termoCodornizInfo" />
+
+    <TextView
+        android:id="@+id/textView_gradosCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_grados"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tempCodornizInfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
