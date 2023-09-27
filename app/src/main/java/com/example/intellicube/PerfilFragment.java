@@ -1,5 +1,6 @@
 package com.example.intellicube;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,10 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.intellicube.fragmentsAjustes.AjustesPerfilFragment;
 import com.example.intellicube.fragmentsInformacion.CodornizFragmentInformacion;
 import com.example.intellicube.fragmentsInformacion.PatoFragmentInformacion;
+import com.example.intellicube.ui.HomeActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +34,8 @@ public class PerfilFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Button button_ajustes, button_cerrarSesion;
+    Button button_ajustes;
+    LinearLayout button_cerrarSesion;
     public PerfilFragment() {
         // Required empty public constructor
     }
@@ -83,6 +87,15 @@ public class PerfilFragment extends Fragment {
                 fragmentTransaction.replace(R.id.frameLayout_perfil , yourFragment);
                 fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
                 fragmentTransaction.commit();
+            }
+        });
+
+        button_cerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+                Intent intent = new Intent(requireActivity().getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
             }
         });
 
