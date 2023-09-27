@@ -1,14 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout_perfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/rose_200"
     tools:context=".PerfilFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView_perfilRegistro"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circle_image"
+                android:src="@mipmap/icono"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_nombrePerfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="@string/textView_nombre"
+                android:textColor="@color/blue_500"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_perfilRegistro"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_nombrePerfilUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="  Nombre"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_nombrePerfil"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_apellidosPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="@string/textView_apellidos"
+                android:textColor="@color/rose_700"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_nombrePerfilUsuario"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_apellidosPerfilUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/diseno_textview_perfil_azul"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="  Apellidos"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_apellidosPerfil"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_estadoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="@string/textView_estado"
+                android:textColor="@color/blue_500"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_apellidosPerfilUsuario"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_estadoPerfilUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="  Estado"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_estadoPerfil"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_municipioPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="@string/textView_municipio"
+                android:textColor="@color/rose_700"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_estadoPerfilUsuario"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <TextView
+                android:id="@+id/textView_municipioPerfilUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/diseno_textview_perfil_azul"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center_vertical"
+                android:text="  Municipio"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_municipioPerfil"
+                tools:layout_conversion_absoluteHeight="807dp"
+                tools:layout_conversion_absoluteWidth="393dp" />
+
+            <Button
+                android:id="@+id/button_ajustesCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/diseno_button_azul"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/button_ajustesDeCuenta"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_municipioPerfilUsuario" />
+
+            <Button
+                android:id="@+id/button_cerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_button_rosa"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/button_cerrar"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_ajustesCuenta" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

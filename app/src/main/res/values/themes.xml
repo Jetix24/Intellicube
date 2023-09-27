@@ -20,6 +20,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="NoUnderlineEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Otros atributos de estilo si los tienes -->
+
+        <!-- Establece el color transparente para la línea indicadora -->
+        <item name="boxStrokeColor">@android:color/transparent</item>
+    </style>
 
     <style name="Theme.Intellicube.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

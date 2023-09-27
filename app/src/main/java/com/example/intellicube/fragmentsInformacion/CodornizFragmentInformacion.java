@@ -1,4 +1,4 @@
-package com.example.intellicube.framentsInformacion;
+package com.example.intellicube.fragmentsInformacion;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

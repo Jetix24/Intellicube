@@ -9,12 +9,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.intellicube.framentsInformacion.CodornizFragmentInformacion;
-import com.example.intellicube.framentsInformacion.PatoFragmentInformacion;
-import com.example.intellicube.framentsInformacion.PolloFragmentInformacion;
+import com.example.intellicube.fragmentsInformacion.CodornizFragmentInformacion;
+import com.example.intellicube.fragmentsInformacion.PatoFragmentInformacion;
+import com.example.intellicube.fragmentsInformacion.PolloFragmentInformacion;
 
 
 /**

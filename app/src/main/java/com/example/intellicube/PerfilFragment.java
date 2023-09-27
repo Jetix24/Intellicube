@@ -3,10 +3,17 @@ package com.example.intellicube;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.intellicube.fragmentsAjustes.AjustesPerfilFragment;
+import com.example.intellicube.fragmentsInformacion.CodornizFragmentInformacion;
+import com.example.intellicube.fragmentsInformacion.PatoFragmentInformacion;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +31,7 @@ public class PerfilFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    Button button_ajustes, button_cerrarSesion;
     public PerfilFragment() {
         // Required empty public constructor
     }
@@ -58,7 +66,27 @@ public class PerfilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View vista = inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        button_ajustes =  vista.findViewById(R.id.button_ajustesCuenta);
+        button_cerrarSesion =  vista.findViewById(R.id.button_cerrarSesion);
+
+        button_ajustes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_ajustes.setVisibility(View.INVISIBLE);
+                button_cerrarSesion.setVisibility(View.INVISIBLE);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                AjustesPerfilFragment yourFragment= new AjustesPerfilFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                fragmentTransaction.replace(R.id.frameLayout_perfil , yourFragment);
+                fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
+                fragmentTransaction.commit();
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false);
+        return vista;
     }
 }
