@@ -25,7 +25,8 @@
     <string name="button_guardar">Guardar</string>
     <string name="button_cerrar">Cerrar Sesión</string>
 
-
+    <string name="textView_nombreEjemplo">José Pablo</string>
+    <string name="textView_correoEjemplo">Josepabloaguirre02@gmail.com</string>
     <string name="textView_nombre">Nombre(s)</string>
     <string name="textView_apellidos">Apellidos</string>
     <string name="textView_municipio">Municipio</string>

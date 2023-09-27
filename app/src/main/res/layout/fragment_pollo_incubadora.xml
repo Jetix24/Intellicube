@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rose_200"
+    tools:context=".fragmentsIncubadora.PolloIncubadoraFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_polloIncubadora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center"
+                android:text="@string/textView_pollo"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_polloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/pollo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_polloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_polloTiempoIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:text="@string/textView_tiempo"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_polloIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_relojPolloIncubadora"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/reloj"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_polloTiempoIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_tiempoPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_tiempoPollo"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_relojPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_diaPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_d"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_horaPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_h"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_diaPolloIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_minPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_m"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_horaPolloIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_segPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_s"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_minPolloIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_polloTempIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/textView_temperatura"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_horaPolloIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_termoPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/temperatura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_polloTempIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_tempPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_tempPollo"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_termoPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_gradosPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_grados"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tempPolloIncubadora" />
+
+            <LinearLayout
+                android:id="@+id/button_detenerPollo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gradosPolloIncubadora">
+
+                <TextView
+                    android:id="@+id/textView_detenerPollo"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_detener"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_reiniciarPollo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_button_azul"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/button_reiniciar"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_detenerPollo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

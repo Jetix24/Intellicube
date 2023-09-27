@@ -34,8 +34,8 @@ public class PerfilFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Button button_ajustes;
-    LinearLayout button_cerrarSesion;
+    Button button_cerrarSesion;
+    LinearLayout button_ajustes;
     public PerfilFragment() {
         // Required empty public constructor
     }

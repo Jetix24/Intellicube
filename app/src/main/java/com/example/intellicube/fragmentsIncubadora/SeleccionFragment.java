@@ -3,10 +3,14 @@ package com.example.intellicube.fragmentsIncubadora;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.intellicube.R;
 
@@ -25,6 +29,10 @@ public class SeleccionFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    LinearLayout button_polloIncubadora, button_codornizIncubadora, button_patoIncubadora;
+    Button button_iniciar;
+    int seleccion = 0;
 
     public SeleccionFragment() {
         // Required empty public constructor
@@ -60,7 +68,75 @@ public class SeleccionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_seleccion, container, false);
+
+        View vista = inflater.inflate(R.layout.fragment_seleccion, container, false);
+
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        button_polloIncubadora = vista.findViewById(R.id.linearLayout_polloIncubadora);
+        button_codornizIncubadora = vista.findViewById(R.id.linearLayout_codornizIncubadora);
+        button_patoIncubadora = vista.findViewById(R.id.linearLayout_patoIncubadora);
+        button_iniciar = vista.findViewById(R.id.button_iniciarIncubadora);
+
+        button_polloIncubadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_polloIncubadora.setBackgroundResource(R.drawable.rounded_border_select);
+                button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                seleccion = 1;
+            }
+        });
+        button_codornizIncubadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_polloIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border_select);
+                button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                seleccion = 2;
+            }
+        });
+        button_patoIncubadora.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_polloIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border);
+                button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border_select);
+                seleccion = 3;
+            }
+        });
+
+        button_iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (seleccion == 1){
+                    button_iniciar.setVisibility(View.INVISIBLE);
+                    PolloIncubadoraFragment yourFragment= new PolloIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                    fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
+                    fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
+                    fragmentTransaction.commit();
+                }else if (seleccion == 2){
+                    button_iniciar.setVisibility(View.INVISIBLE);
+                    CodornizIncubadoraFragment yourFragment= new CodornizIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                    fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
+                    fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
+                    fragmentTransaction.commit();
+                } else if (seleccion == 3) {
+                    button_iniciar.setVisibility(View.INVISIBLE);
+                    PatoIncubadoraFragment yourFragment= new PatoIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                    fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
+                    fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
+                    fragmentTransaction.commit();
+                }else{
+
+                }
+
+
+            }
+        });
+
+
+        return vista;
     }
 }

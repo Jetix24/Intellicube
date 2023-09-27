@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rose_200"
+    tools:context=".fragmentsIncubadora.CodornizIncubadoraFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_codornizIncubadora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/helvetica"
+                android:gravity="center"
+                android:text="@string/textView_codorniz"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_codornizIncubadora"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/codorniz"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_codornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_codornizTiempoIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="40dp"
+                android:text="@string/textView_tiempo"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_codornizIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_relojCodornizIncubadora"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/reloj"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_codornizTiempoIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_tiempoCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_tiempoCodorniz"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_relojCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_diaCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_d"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_horaCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_h"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_diaCodornizIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_minCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_m"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_horaCodornizIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_segCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_s"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView_minCodornizIncubadora"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tiempoCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_codornizTempIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/textView_temperatura"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_horaCodornizIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_termoCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/temperatura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_codornizTempIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_tempCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_tempCodorniz"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_termoCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_gradosCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_grados"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tempCodornizIncubadora" />
+
+            <LinearLayout
+                android:id="@+id/button_detenerCodorniz"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gradosCodornizIncubadora">
+
+                <TextView
+                    android:id="@+id/textView_detenerCodorniz"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_detener"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_reiniciarCodorniz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_button_azul"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/button_reiniciar"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_detenerCodorniz" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

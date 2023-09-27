@@ -3,10 +3,16 @@ package com.example.intellicube;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.example.intellicube.fragmentsIncubadora.SeleccionFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +30,9 @@ public class IncubadoraFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     String titulo= "mi_actividad";
+
+    Button button_conectar;
+
 
     public IncubadoraFragment() {
         // Required empty public constructor
@@ -59,7 +68,22 @@ public class IncubadoraFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_incubadora, container, false);
+        View vista = inflater.inflate(R.layout.fragment_incubadora, container, false);
+        button_conectar =  vista.findViewById(R.id.button_conectar);
+
+        button_conectar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button_conectar.setVisibility(View.INVISIBLE);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                SeleccionFragment yourFragment= new SeleccionFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                fragmentTransaction.replace(R.id.frameLayout_incubadora, yourFragment);
+                fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
+                fragmentTransaction.commit();
+            }
+        });
+        return vista;
     }
 }
