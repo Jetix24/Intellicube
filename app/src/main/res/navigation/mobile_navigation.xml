@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_configuracion" />
     <fragment
         android:id="@+id/nav_incubadora"
-        android:name="com.example.intellicube.IncubadoraFragment"
+        android:name="com.example.intellicube.fragmentsIncubadora.IncubadoraFragment"
         android:label="@string/incubadora"
         tools:layout="@layout/fragment_incubadora" />
     <fragment

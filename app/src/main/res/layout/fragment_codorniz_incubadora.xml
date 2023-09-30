@@ -182,6 +182,53 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_tempCodornizIncubadora" />
 
+            <TextView
+                android:id="@+id/textView_codornizHumIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_humedad"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gradosCodornizIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_gotaCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:src="@drawable/humedad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_codornizHumIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_humedadCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_hum"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gotaCodornizIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_porcentajeCodornizIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_porcentaje"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_humedadCodornizIncubadora" />
+
+
             <LinearLayout
                 android:id="@+id/button_detenerCodorniz"
                 android:layout_width="match_parent"
@@ -194,7 +241,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_gradosCodornizIncubadora">
+                app:layout_constraintTop_toBottomOf="@+id/textView_porcentajeCodornizIncubadora">
 
                 <TextView
                     android:id="@+id/textView_detenerCodorniz"
@@ -208,6 +255,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+
             <Button
                 android:id="@+id/button_reiniciarCodorniz"
                 android:layout_width="match_parent"
@@ -215,7 +263,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="16dp"
                 android:background="@drawable/diseno_button_azul"
                 android:fontFamily="@font/helvetica"
                 android:text="@string/button_reiniciar"
@@ -223,11 +270,40 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_detenerCodorniz" />
+
+            <LinearLayout
+                android:id="@+id/button_desconectarCodorniz"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_reiniciarCodorniz">
+
+                <TextView
+                    android:id="@+id/textView_desconectarCodorniz"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_desconectar"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

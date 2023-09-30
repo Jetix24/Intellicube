@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_intruccionesIncubadora">
 
         <ImageView
-            android:id="@+id/imageView_polloIncubadora"
+            android:id="@+id/imageView_Incubadora"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

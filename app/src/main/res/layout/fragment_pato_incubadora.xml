@@ -11,7 +11,7 @@
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,6 +180,52 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_tempPatoIncubadora" />
 
+            <TextView
+                android:id="@+id/textView_patoHumIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_humedad"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gradosPatoIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_gotaPatoIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:src="@drawable/humedad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_patoHumIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_humedadPatoIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_hum"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gotaPatoIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_porcentajePatoIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_porcentaje"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_humedadPatoIncubadora" />
+
             <LinearLayout
                 android:id="@+id/button_detenerPato"
                 android:layout_width="match_parent"
@@ -192,7 +238,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_gradosPatoIncubadora">
+                app:layout_constraintTop_toBottomOf="@+id/textView_porcentajePatoIncubadora">
 
                 <TextView
                     android:id="@+id/textView_detenerPato"
@@ -213,7 +259,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="16dp"
                 android:background="@drawable/diseno_button_azul"
                 android:fontFamily="@font/helvetica"
                 android:text="@string/button_reiniciar"
@@ -221,11 +266,39 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_detenerPato" />
+
+            <LinearLayout
+                android:id="@+id/button_desconectarPato"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_reiniciarPato">
+
+                <TextView
+                    android:id="@+id/textView_desconectarPato"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_desconectar"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

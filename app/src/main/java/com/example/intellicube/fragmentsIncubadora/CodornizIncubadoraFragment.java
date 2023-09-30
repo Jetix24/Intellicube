@@ -26,6 +26,8 @@ public class CodornizIncubadoraFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    static String texto = "0";
+
     public CodornizIncubadoraFragment() {
         // Required empty public constructor
     }

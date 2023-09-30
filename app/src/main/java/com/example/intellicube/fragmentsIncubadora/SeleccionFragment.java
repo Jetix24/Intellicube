@@ -1,16 +1,22 @@
 package com.example.intellicube.fragmentsIncubadora;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.intellicube.R;
 
@@ -33,6 +39,13 @@ public class SeleccionFragment extends Fragment {
     LinearLayout button_polloIncubadora, button_codornizIncubadora, button_patoIncubadora;
     Button button_iniciar;
     int seleccion = 0;
+
+    static String seleccion_texto;
+
+
+    ImageView imageView_Incubadora;
+
+    TextView textView_titulo;
 
     public SeleccionFragment() {
         // Required empty public constructor
@@ -78,6 +91,8 @@ public class SeleccionFragment extends Fragment {
         button_codornizIncubadora = vista.findViewById(R.id.linearLayout_codornizIncubadora);
         button_patoIncubadora = vista.findViewById(R.id.linearLayout_patoIncubadora);
         button_iniciar = vista.findViewById(R.id.button_iniciarIncubadora);
+        imageView_Incubadora = vista.findViewById(R.id.imageView_Incubadora);
+
 
         button_polloIncubadora.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +101,7 @@ public class SeleccionFragment extends Fragment {
                 button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border);
                 button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border);
                 seleccion = 1;
+                seleccion_texto = "Pollo";
             }
         });
         button_codornizIncubadora.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +111,7 @@ public class SeleccionFragment extends Fragment {
                 button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border_select);
                 button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border);
                 seleccion = 2;
+                seleccion_texto = "Codorniz";
             }
         });
         button_patoIncubadora.setOnClickListener(new View.OnClickListener() {
@@ -104,19 +121,20 @@ public class SeleccionFragment extends Fragment {
                 button_codornizIncubadora.setBackgroundResource(R.drawable.rounded_border);
                 button_patoIncubadora.setBackgroundResource(R.drawable.rounded_border_select);
                 seleccion = 3;
+                seleccion_texto = "Pato";
             }
         });
 
         button_iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (seleccion == 1){
+                if (seleccion >= 1  && seleccion <=3) {
                     button_iniciar.setVisibility(View.INVISIBLE);
                     PolloIncubadoraFragment yourFragment= new PolloIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
                     fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
                     fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
                     fragmentTransaction.commit();
-                }else if (seleccion == 2){
+                /*else if (seleccion == 2){
                     button_iniciar.setVisibility(View.INVISIBLE);
                     CodornizIncubadoraFragment yourFragment= new CodornizIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
                     fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
@@ -127,12 +145,10 @@ public class SeleccionFragment extends Fragment {
                     PatoIncubadoraFragment yourFragment= new PatoIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
                     fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
                     fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
-                    fragmentTransaction.commit();
+                    fragmentTransaction.commit();*/
                 }else{
-
+                    Toast.makeText(requireActivity().getApplicationContext(), "Selecciona una opción ", Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
 

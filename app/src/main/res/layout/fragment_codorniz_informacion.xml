@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/rose_200"
     tools:context=".fragmentsInformacion.PolloFragmentInformacion">
 
@@ -171,7 +171,7 @@
         android:src="@drawable/temperatura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CodornizTempInfo"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_CodornizTempInfo" />
 
     <TextView
         android:id="@+id/textView_tempCodornizInfo"
@@ -194,14 +194,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="@font/helvetica"
         android:text="@string/textView_grados"
+        android:textColor="@color/rose_500"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tempCodornizInfo" />
+
+    <TextView
+        android:id="@+id/textView_codornizHumInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/textView_humedad"
+        android:textColor="@color/rose_700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_gradosCodornizInfo" />
+
+    <ImageView
+        android:id="@+id/imageView_gotaCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/humedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_codornizHumInfo" />
+
+    <TextView
+        android:id="@+id/textView_humedadCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_hum"
+        android:textColor="@color/blue_500"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_gotaCodornizInfo" />
+
+    <TextView
+        android:id="@+id/textView_porcentajeCodornizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/helvetica"
+        android:text="@string/textView_porcentaje"
         android:textColor="@color/rose_500"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_tempCodornizInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_humedadCodornizInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

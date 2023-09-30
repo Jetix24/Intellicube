@@ -2,20 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout3"
+    android:id="@+id/frameLayout_polloIncubadora"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/rose_200"
     tools:context=".fragmentsIncubadora.PolloIncubadoraFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/helvetica"
                 android:gravity="center"
-                android:text="@string/textView_pollo"
+                android:text="Ala"
                 android:textColor="@color/rose_700"
                 android:textSize="34sp"
                 android:textStyle="bold"
@@ -37,7 +38,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView_polloIncubadora"
+                android:id="@+id/imageView_Incubadora"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -58,7 +59,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView_polloIncubadora" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView_Incubadora" />
 
             <ImageView
                 android:id="@+id/imageView_relojPolloIncubadora"
@@ -156,7 +157,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView_polloTempIncubadora" />
 
             <TextView
-                android:id="@+id/textView_tempPolloIncubadora"
+                android:id="@+id/textView_tempIncubadora"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -179,10 +180,57 @@
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_tempPolloIncubadora" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_tempIncubadora" />
+
+
+            <TextView
+                android:id="@+id/textView_polloHumIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_humedad"
+                android:textColor="@color/rose_700"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gradosPolloIncubadora" />
+
+            <ImageView
+                android:id="@+id/imageView_gotaPolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:src="@drawable/humedad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_polloHumIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_humedadIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_hum"
+                android:textColor="@color/blue_500"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gotaPolloIncubadora" />
+
+            <TextView
+                android:id="@+id/textView_porcentajePolloIncubadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:text="@string/textView_porcentaje"
+                android:textColor="@color/rose_500"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_humedadIncubadora" />
 
             <LinearLayout
-                android:id="@+id/button_detenerPollo"
+                android:id="@+id/button_conectar"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginStart="20dp"
@@ -193,10 +241,10 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_gradosPolloIncubadora">
+                app:layout_constraintTop_toBottomOf="@+id/textView_porcentajePolloIncubadora">
 
                 <TextView
-                    android:id="@+id/textView_detenerPollo"
+                    android:id="@+id/textView_conectar"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_weight="1"
@@ -214,7 +262,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="16dp"
                 android:background="@drawable/diseno_button_azul"
                 android:fontFamily="@font/helvetica"
                 android:text="@string/button_reiniciar"
@@ -222,11 +269,39 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_detenerPollo" />
+                app:layout_constraintTop_toBottomOf="@+id/button_conectar" />
+
+            <LinearLayout
+                android:id="@+id/button_desconectarPollo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/diseno_textview_perfil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_reiniciarPollo">
+
+                <TextView
+                    android:id="@+id/textView_desconectarPollo"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/button_desconectar"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
