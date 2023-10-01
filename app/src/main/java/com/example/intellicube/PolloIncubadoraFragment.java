@@ -1,4 +1,4 @@
-package com.example.intellicube.fragmentsIncubadora;
+package com.example.intellicube;
 
 import android.os.Bundle;
 
@@ -12,9 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-
-import com.example.intellicube.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -85,10 +82,10 @@ public class PolloIncubadoraFragment extends Fragment {
         humedad= IncubadoraFragment.conexion_humedad;
 
         imagen = vista.findViewById(R.id.imageView_Incubadora);
-        textView_titulo = vista.findViewById(R.id.textView_polloIncubadora);
+        textView_titulo = vista.findViewById(R.id.textView_Incubadora);
         textView_temperatura = vista.findViewById(R.id.textView_tempIncubadora);
         textView_humedad = vista.findViewById(R.id.textView_humedadIncubadora);
-        button_detener = vista.findViewById(R.id.button_conectar);
+        button_detener = vista.findViewById(R.id.button_revisar);
         button_reiniciar = vista.findViewById(R.id.button_reiniciarPollo);
         button_desconectar = vista.findViewById(R.id.button_desconectarPollo);
 

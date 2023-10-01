@@ -1,6 +1,5 @@
-package com.example.intellicube.fragmentsIncubadora;
+package com.example.intellicube;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -8,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.intellicube.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -129,12 +125,13 @@ public class SeleccionFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (seleccion >= 1  && seleccion <=3) {
-                    button_iniciar.setVisibility(View.INVISIBLE);
-                    PolloIncubadoraFragment yourFragment= new PolloIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
+                    Intent intent = new Intent(getContext(), MainActivity2.class);
+                    startActivity(intent);
+                /*    PolloIncubadoraFragment yourFragment= new PolloIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
                     fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);
                     fragmentTransaction.addToBackStack(null); // Para agregar a la pila de retroceso
                     fragmentTransaction.commit();
-                /*else if (seleccion == 2){
+                else if (seleccion == 2){
                     button_iniciar.setVisibility(View.INVISIBLE);
                     CodornizIncubadoraFragment yourFragment= new CodornizIncubadoraFragment(); // Reemplaza "YourFragment" con el nombre de tu fragmento
                     fragmentTransaction.replace(R.id.frameLayout_seleccion, yourFragment);

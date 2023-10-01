@@ -1,4 +1,4 @@
-package com.example.intellicube.fragmentsIncubadora;
+package com.example.intellicube;
 
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.intellicube.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +35,6 @@ public class IncubadoraFragment extends Fragment {
     Button button_revisar;
 
     LinearLayout button_conectar;
-
 
     public IncubadoraFragment() {
         // Required empty public constructor
@@ -73,8 +71,9 @@ public class IncubadoraFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_incubadora, container, false);
-        button_conectar =  vista.findViewById(R.id.button_conectar);
-        button_revisar = vista.findViewById(R.id.button_revisar);
+        button_conectar =  vista.findViewById(R.id.button_revisar);
+        button_revisar = vista.findViewById(R.id.button_revisarIncubadora);
+
 
         button_revisar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,11 +82,12 @@ public class IncubadoraFragment extends Fragment {
             }
         });
 
+
         button_conectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                conexion_temperatura = "10";
-                conexion_humedad = "20";
+                conexion_humedad = "40";
+                conexion_temperatura = "50";
                 button_conectar.setVisibility(View.INVISIBLE);
                 button_revisar.setVisibility(View.INVISIBLE);
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();

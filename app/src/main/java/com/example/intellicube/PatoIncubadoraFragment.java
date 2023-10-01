@@ -1,41 +1,19 @@
-package com.example.intellicube.fragmentsIncubadora;
+package com.example.intellicube;
 
-import static android.view.View.inflate;
-import static androidx.core.app.ActivityCompat.finishAffinity;
-
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.intellicube.MainActivity;
-
-import com.example.intellicube.R;
-
-import java.util.Set;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ConexionFragment#newInstance} factory method to
+ * Use the {@link PatoIncubadoraFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConexionFragment extends Fragment {
+public class PatoIncubadoraFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,19 +24,7 @@ public class ConexionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
-    /*private static final String TAG = "ConexionFragment";
-    ListView IdLista;
-
-    public static String EXTRA_DEVICE_ADDRESS = "device_address";
-
-    private BluetoothAdapter mBtAdapter;
-    private ArrayAdapter mPairedDevicesArrayAdapter;*/
-
-    View vista;
-
-
-    public ConexionFragment() {
+    public PatoIncubadoraFragment() {
         // Required empty public constructor
     }
 
@@ -68,11 +34,11 @@ public class ConexionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ConexionFragment.
+     * @return A new instance of fragment PatoIncubadoraFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ConexionFragment newInstance(String param1, String param2) {
-        ConexionFragment fragment = new ConexionFragment();
+    public static PatoIncubadoraFragment newInstance(String param1, String param2) {
+        PatoIncubadoraFragment fragment = new PatoIncubadoraFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -92,10 +58,7 @@ public class ConexionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        vista = inflater.inflate(R.layout.fragment_conexion, container, false);
-
-
         // Inflate the layout for this fragment
-        return vista;
+        return inflater.inflate(R.layout.fragment_pato_incubadora, container, false);
     }
 }

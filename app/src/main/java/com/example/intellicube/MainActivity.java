@@ -1,17 +1,8 @@
 package com.example.intellicube;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.intellicube.fragmentsIncubadora.PolloIncubadoraFragment;
-import com.example.intellicube.fragmentsIncubadora.SeleccionFragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -22,9 +13,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intellicube.databinding.ActivityMainBinding;
-
-import java.io.IOException;
-import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 

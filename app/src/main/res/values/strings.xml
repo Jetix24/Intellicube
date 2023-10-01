@@ -46,6 +46,7 @@
     <string name="button_reiniciar">Reiniciar</string>
     <string name="button_desconectar">Desconectar</string>
     <string name="button_revisar">Revisar</string>
+    <string name="vacior">Revisar</string>
 
     <string name="textView_iniciarConexion">Iniciar Conexión</string>
     <string name="textView_intruccionesIncubadora">Seleccione los tipos de huevos que se incubaran</string>
